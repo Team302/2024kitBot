@@ -7,26 +7,27 @@ package frc.robot.commands;
 import static frc.robot.Constants.LauncherConstants.*;
 
 import edu.wpi.first.wpilibj2.command.Command;
-//import frc.robot.subsystems.PWMLauncher;
+import frc.robot.subsystems.PWMLauncher;
 
-import frc.robot.subsystems.CANLauncher;
+//import frc.robot.subsystems.CANLauncher;
 
 /*This is an example of creating a command as a class. The base Command class provides a set of methods that your command
  * will override.
  */
 public class LaunchNote extends Command {
-  //PWMLauncher m_launcher;
+  PWMLauncher m_launcher;
 
-  CANLauncher m_launcher;
+  //CANLauncher m_launcher;
 
   /** Creates a new LaunchNote. */
-  public LaunchNote(CANLauncher launcher) {
+  public LaunchNote(PWMLauncher launcher) {
     // save the launcher system internally
     m_launcher = launcher;
 
     // indicate that this command requires the launcher system
     addRequirements(m_launcher);
   }
+  
 
   // The initialize method is called when the command is initially scheduled.
   @Override
