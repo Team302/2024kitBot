@@ -38,7 +38,7 @@ public class PWMDrivetrain extends SubsystemBase {
 
     // Invert left side motors so both sides drive forward with positive output values
     leftMotors.setInverted(true);
-    rightMotors.setInverted(false);
+    rightMotors.setInverted(true);
 
     // Put our controller groups into a DifferentialDrive object. This object represents all 4 motor
     // controllers in the drivetrain

@@ -60,8 +60,8 @@ public class RobotContainer {
 
     /*Create an inline sequence to run when the operator presses and holds the A (green) button. Run the PrepareLaunch
      * command for 1 seconds and then run the LaunchNote command */
-    m_operatorController
-        .a()
+    m_driverController
+        .rightTrigger(0.5)
         .whileTrue(
             new PrepareLaunch(m_launcher)
                 .withTimeout(LauncherConstants.kLauncherDelay)
@@ -70,7 +70,7 @@ public class RobotContainer {
 
     // Set up a binding to run the intake command while the operator is pressing and holding the
     // left Bumper
-    m_operatorController.leftBumper().whileTrue(m_launcher.getIntakeCommand());
+    m_driverController.leftTrigger(0.5).whileTrue(m_launcher.getIntakeCommand());
   }
 
   /**
